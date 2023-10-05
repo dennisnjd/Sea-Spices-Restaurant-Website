@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
       mobileNavToogle();
     })
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -108,12 +108,29 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
+  const button = document.getElementById("submitBtn");
+  const errorMessage = document.getElementById("errorMessage");
+
+
+  button.onclick = function () {
+
+     button.style.backgroundColor="lightblue"
+    setTimeout(function () {
+      button.style.display="none"
+      errorMessage.textContent = "Server error. Call us at 9383494923 ";
+      errorMessage.style.display = "block";
+    }, 1000);
+
+   
+  };
+
+
   /**
    * Scroll top button
    */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);

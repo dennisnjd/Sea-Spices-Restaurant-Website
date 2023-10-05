@@ -825,6 +825,19 @@ section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  background-color: black; /* Optional: Add a background color for visibility */
+  color: white;
+  text-align: center; /* Optional: Center the text horizontally */
+}
+
+.stats-counter  p {
+  color: white;
+  font-size:x-large;
+  font-weight: bolder;
+  font-family:cursive;
 }
 
 @media (min-width: 1365px) {
@@ -930,8 +943,15 @@ section {
 }
 
 .menu .tab-content .menu-item .menu-img {
+  width: 20em;
   padding: 0 60px;
   margin-bottom: 15px;
+  height: 11em;
+  border-radius: 50%;
+
+}
+.menuPhoto{
+  border-radius:20% !important;
 }
 
 .menu .tab-content .menu-item h4 {
